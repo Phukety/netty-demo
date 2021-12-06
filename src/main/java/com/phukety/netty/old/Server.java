@@ -13,7 +13,6 @@ public class Server {
         Socket clientSocket = serverSocket.accept();
         System.out.println("连接成功");
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        // PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
         String request;
         while ((request = in.readLine()) != null) {
             if ("Done".equals(request)) {
